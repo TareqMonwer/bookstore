@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+
+{% block title %} Search Results {% endblock title %}
+
+
+{% block content %}
+<h1>Search Result Page:</h1>
+<div class="row">
+    {% for book in books %}
+    <div class="col-md-4 mb-5">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <a href="{{ book.get_absolute_url }}">
+                    <img class="bookcover" src="{{ book.cover.url }}" alt="{{ book.title }}">
+                </a>
+                <a href="{{ book.get_absolute_url }}">
+                    <h5 class="card-title">{{ book.title }}</h5>
+                </a>
+                <h6 class="card-subtitle mb-2 text-muted">{{ book.author }}</h6>
+                <span>
+                    <h4 class="text-warning d-inline">${{ book.price }}</h4>
+                </span>
+                <a href="{{ book.get_absolute_url }}" class="float-right">View details</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

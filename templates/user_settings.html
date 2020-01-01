@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% block title %} Account Settings {% endblock title %}
+
+
+{% block content %}
+<h1>Your Account Settings:</h1>
+
+<div class="list-group">
+    <a href="{% url 'account_email' %}" class="list-group-item list-group-item-action">
+        Email Settings
+    </a>
+    <a href="{% url 'account_change_password' %}" class="list-group-item list-group-item-action">
+        Change Password
+    </a>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends '_base.html' %}
+
+{% block title %} {{ book.title }} Detail {% endblock title %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body d-flex justify-content-between">
+                <div class="content">
+                    <h5 class="card-title">{{ book.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ book.author }}</h6>
+                    <h4 class="text-warning">${{ book.price }}</h4>
+                    <a href="" class="btn btn-primary">Read Sample</a>  
+                </div>
+                <div class="cover">
+                    <img class="bookcover" src="{{ book.cover.url }}" alt="{{ book.title }}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="col-md-12 reviews mt-5">
+        <h4 class="mb-3">Reviews for {{ book }}:</h4>
+        {% for review in book.reviews.all %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">
+                    - {{ review.author }}
+                </h6>
+                {{ review.review }}
+            </div>
+        </div>
+        {% empty %}
+        No one reviewed yet, be the first!
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,9 @@
+h1 {
+    color: rebeccapurple;
+}
+
+.bookcover {
+    height: 300px;
+    width: 200px;
+    display: block;
+}
