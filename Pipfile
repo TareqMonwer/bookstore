@@ -7,7 +7,7 @@ verify_ssl = true
 black = "*"
 
 [packages]
-django = "==2.2.7"
+django = "==2.2.13"
 psycopg2-binary = "==2.8.4"
 django-crispy-forms = "*"
 django-allauth = "==0.40.0"
