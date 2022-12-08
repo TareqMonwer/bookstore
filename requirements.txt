@@ -1,4 +1,4 @@
-certifi==2019.11.28
+certifi==2022.12.7
 Django==3.2.14
 django-crispy-forms==1.8.1
 pipenv==2018.11.26
