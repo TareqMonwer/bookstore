@@ -4,6 +4,6 @@ django-crispy-forms==1.8.1
 pipenv==2018.11.26
 psycopg2-binary==2.8.4
 pytz==2019.3
-sqlparse==0.3.0
+sqlparse==0.4.4
 virtualenv==16.7.9
 virtualenv-clone==0.5.3
