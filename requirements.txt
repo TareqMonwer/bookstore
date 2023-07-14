@@ -1,5 +1,5 @@
 certifi==2019.11.28
-Django==3.2.14
+Django==3.2.20
 django-crispy-forms==1.8.1
 pipenv==2018.11.26
 psycopg2-binary==2.8.4
